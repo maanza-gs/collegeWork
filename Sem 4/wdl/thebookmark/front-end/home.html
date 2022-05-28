@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Calibri' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="import" href="./banner.html">
+    <title>Home Page</title>
+    <style>
+        *{
+            font-family: 'futura';
+        }
+    </style>
+</head>
+<body>
+    <div class="pagecontent" style="display: grid;">
+        <div id="banner" style="margin-top: 0;" ></div>
+        <!--announcements slideshow-->
+        <div class="announcements" style="width: 80%; height: 150px; display: flex; justify-content: space-evenly;
+            margin-left: auto; margin-right: auto; margin-top: 100px;">
+            <div class="box" style="width: 5%; height: 150px; background: #ff896b94;">
+            <span>
+                <i class="fa fa-arrow" style="color: #ebe6e6;"></i>
+            </span></div>
+            <div class="image-nav" style="width: 80%; height: 100%; display: block;">
+                <img src="./images/challenge.png" style="width: 100%; height: 100%;">
+                <!-- add nav slide show here-->
+            </div>
+            <div class="box" style="width: 5%; height: 150px; background: #ff896b94; "></div>
+        </div>
+
+        <!-- currently reading window-->
+        <div class="content" style="display: flex; height: 500px;">
+            <div class="box1" style="width: 25%; background: #ebe6e6; margin-top: 50px; margin-left: auto;
+            margin-right: auto;">
+                <h4 style="margin: 10px; text-align:center;font-family: 'happy monkey'; font-weight: bolder;";>CURRENTLY READING</h4>
+            <!--find ways to display books here in an orangised manner -->
+            <div class="books" style="margin: 5px;">
+                    <div class="book" style="width: 80%;margin-left: auto; margin-right:auto;padding-top: 10px; display: flex; 
+                justify-content: space-evenly;">
+                    <img src="images/book1.png" style="width: 100px;height: 150px;"> 
+                    <div class="book-details" style="display: block; width: 150px;">
+                        <p>Clockwork Prince <br> <span style="font-size: 12px;">by Cassandra Clare</span></p> <!-- book name, author name-->
+                        <div class="progress-bar">
+                            <hr style="float:left;width: 80%; height: 7px; border-radius: 5px; background-color: #ffffff; border: none;">
+                        </div>
+                        <a href = "#"><button style="height: 25px; background: #ff896b; border: none; border-radius: 10px;
+                            color: white; cursor: pointer;">UPDATE PROGRESS</button></a>
+                    </div>
+                </div>
+                <div class="book" style="width: 80%;margin-left: auto; margin-right:auto;padding-top: 10px; display: flex; 
+                justify-content: space-evenly;">
+                    <img src="images/book2.png" style="width: 100px;height: 150px;"> 
+                    <div class="book-details" style="display: block;  width: 150px;">
+                        <p>The Raven Boys <br> <span style="font-size: 12px;">by Maggie Stiefvater</span></p> <!-- book name, author name-->
+                        <div class="progress-bar">
+                            <hr style="float:left;width: 80%; height: 7px; border-radius: 5px; background-color: #ffffff; border: none;">
+                        </div>
+                        <a href = "#"><button style="height: 25px; background: #ff896b; border: none; border-radius: 10px;
+                            color: white; cursor: pointer;">UPDATE PROGRESS</button></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- browse books window-->
+            <div class="box2" style="width: 70%; background: #ebe6e6; margin-top: 50px; margin-left: auto;
+            margin-right: auto;">
+            <!-- create a template in bookDisplay.html which displays only the books with a format and nothing else-->
+                <iframe src="./bookDisplay.html" style="border: none; width: 100%; height: 100%; float: left;"></iframe> 
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+<script>
+    $(function(){
+    $("#banner").load("banner.html"); 
+    });
+</script>
+</html>

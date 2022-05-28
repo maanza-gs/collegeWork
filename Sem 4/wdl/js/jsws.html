@@ -1,0 +1,28 @@
+<html>
+  <body>
+  </body>
+  <script>
+    let digit = prompt("Enter a 5 digit integer: ");
+    let len = digit.length;
+    while(len != 5)
+    {
+      alert("Not a 5 digit number.");
+      digit = prompt("Enter a 5 digit integer: ");
+      len = digit.length;
+    }
+    let flag = 1;
+    for(let i=0; i<2; i++)
+    {
+      if(digit[i]!=digit[len-i-1])
+      {
+        alert("This is not a palindrome");
+        flag = 0;
+        break;
+      }
+    }
+    if(flag)
+    {
+      alert("This is a palindrome");
+    }
+  </script>
+</html>

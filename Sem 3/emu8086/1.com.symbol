@@ -1,0 +1,24 @@
+< THE SYMBOL TABLE >  1.com  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+S_DCL_LOC1TMP            	00110     	1         	VAR       	(NOSEG)   
+SKIP_DCL_LOC1TMP         	0011B     	-1        	LABEL     	(NOSEG)   
+NEXT_CHAR_LOC1TMP        	0011E     	-1        	LABEL     	(NOSEG)   
+PRINTED_LOC1TMP          	0012C     	-1        	LABEL     	(NOSEG)   
+SWAP                     	00132     	-1        	NEAR      	(NOSEG)   
+BIGGER                   	00139     	-1        	NEAR      	(NOSEG)   
+S_DCL_LOC2TMP            	00141     	1         	VAR       	(NOSEG)   
+SKIP_DCL_LOC2TMP         	00158     	-1        	LABEL     	(NOSEG)   
+NEXT_CHAR_LOC2TMP        	0015B     	-1        	LABEL     	(NOSEG)   
+PRINTED_LOC2TMP          	00169     	-1        	LABEL     	(NOSEG)   
+LABEL                    	0016D     	-1        	LABEL     	(NOSEG)   
+S_DCL_LOC3TMP            	00171     	1         	VAR       	(NOSEG)   
+SKIP_DCL_LOC3TMP         	00186     	-1        	LABEL     	(NOSEG)   
+NEXT_CHAR_LOC3TMP        	00189     	-1        	LABEL     	(NOSEG)   
+PRINTED_LOC3TMP          	00197     	-1        	LABEL     	(NOSEG)   
+EXIT                     	00199     	-1        	LABEL     	(NOSEG)   
+===================================================================================================
+[ 10/7/2021  --  3:48:13 PM ] 
+< END >
+ 

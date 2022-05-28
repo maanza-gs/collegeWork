@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Banner</title>
+    <style>
+        .links:active{
+            color: #ff896b;
+        }
+
+        #checkbox{
+            display: none;
+        }
+
+        .ball{
+            position: absolute; 
+            top: 50%; transform: 
+            translateY(-50%);
+            display: inline-block; 
+            width: 25px; 
+            height: 25px; 
+            background-color:#ff896b;
+            border-radius: 50%;
+            left: 5px; 
+            z-index: 10; 
+            transition: transform .5s ease-in-out;
+        }
+
+        #checkbox:checked+ .ball{
+            transform: translate(25px, -50%);
+        }
+
+        .dark-mode{
+            background: #111111;
+        }
+
+        @media (prefers-color-scheme: dark) {
+        body {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="banner" style="display: flex;justify-content: space-between; position: fixed; width:99%;">
+        <div class="logo">
+            <img src="./images/logo.png" style= "position: fixed; width: 250px; height: 40px; left: 10px;">
+        </div>
+        <div class="top-menu" style="margin-top: 7px; margin-left: 300px; display: flex; 
+            justify-content: space-evenly; width: 250px;">
+            <button type="menu" style="border: none; background: none; cursor: pointer; font-size: 15px; 
+            font-family: 'montserrat'; font-weight: bolder;">
+                <a href="./home.html" class="links" style="text-decoration: none; color: #ff896b;">HOME</a>
+            </button>
+            <button type="menu" style="border: none; background: none; cursor: pointer; font-size: 15px; 
+            font-family: 'montserrat'; font-weight: bolder;">
+                <a href="#" class="links" style="text-decoration: none; color: #ff896b;">BROWSE</a>
+            </button>
+        </div>
+        <form style="width: 450px;margin-top: 7px;margin-left: 50px; margin-right: auto;">
+            <input type="text" placeholder="  Search for books or authors..."
+                style="width: 400px; height: 30px;border: none; background: #ebe6e6; border-radius: 5px;">
+            <button type="submit" style="border: none; background: none; width: 30px; height: 30px;cursor: pointer;">
+                <i class="fa fa-search" style="color: #ff896b; font-size: 20px;"></i></button>
+        </form>
+        <div class="menu-top" style="margin-top: 7px;margin-left: 50px; width: 200px; 
+            display: flex; justify-content: space-between;">
+            <button type="submit" style="border: none; background: none; width: 35px; height: 30px; cursor: pointer;">
+                <i class="fa fa-book" style="color: #ff896b; font-size: 30px;"></i></button>
+            <button type="submit" style="border: none; background: none; width: 30px; height: 30px; cursor: pointer;">
+                <i class="fa fa-user" style="color: #ff896b; font-size: 30px;"></i></button>
+            <button type="submit" style="border: none; background: none; width: 35px; height: 30px; cursor: pointer;">
+                <i class="fa fa-gear" style="color: #ff896b; font-size: 30px;"></i></button>
+        </div>
+        <div class="app-mode" style="margin-left: 50px; margin-top: 7px;">
+            <label for="checkbox" class="toggler" style="display: block; width: 60px; height: 30px;
+                border: 2px solid #ff896b; border-radius: 30px; position: relative; cursor: pointer;">
+                <input type="checkbox" id="checkbox" onclick="webMode()">
+                <span class="ball"></span>
+                <i class="fa fa-sun-o" style="color: #ff896b;font-weight: bolder;position: absolute; top: 50%; transform: translateY(-50%); left: 7px;"></i>
+                <i class="fa fa-moon-o" style="color: #ff896b;font-weight: bolder;position: absolute; top: 50%; transform: translateY(-50%); right: 7px;"></i>
+            </label>
+        </div>
+    </div>
+</body>
+
+<script>
+    function webMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+</script>
+</html>

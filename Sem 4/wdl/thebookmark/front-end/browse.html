@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Display Books</title>
+    <style>
+        *{
+            font-family: 'futura';
+        }
+    </style>
+</head>
+<body>
+    <div class="pagecontent">
+        <div id="banner"></div>
+        <div class="bdisplay" style="width: 100%; height:100%;">
+            <iframe src="./bookDisplay.html" style="width: 100%; height:100vh; border:none;"></iframe>
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+    $("#banner").load("./banner.html"); 
+    });
+</script>
+</html>

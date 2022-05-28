@@ -1,0 +1,309 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            .logo{
+                position: absolute;
+                height: 20vh;
+                width: 20%;
+                z-index: 1;
+            }
+
+            .logo img{
+                height: 20vh;
+                width: 100%;
+                position: absolute;
+                margin-left: 10vw;
+            }
+
+
+            body{
+                background-color: rgb(221, 220, 220);
+            }
+
+            .banner-top{
+                width: 100%;
+                height: 20px;
+                background: rgb(76, 156, 76);
+            }
+
+            .nav-bar{
+                height: 30px;
+                width: 100%;
+                background: white;
+                display: flex;
+                font-family: 'Arial', 'sans-serif';
+                justify-content: center;
+                color: green
+            }
+
+            .nav-list{
+                margin-top: 5px;
+                margin-left: 10px;
+                display: flex;
+                justify-content: space-evenly;
+                width: 35%;
+            }
+
+            .nav-list2{
+                margin-top: 5px;
+                display: flex;
+                justify-content: space-evenly;
+                width: 25%;
+            }
+
+            .give-box{
+                color: white;
+                text-align: center;
+                width: 60px;
+                background: linear-gradient(to bottom, #f8be00, #f5d775);
+            }
+
+            .give-box p{
+                margin-top: 5px;
+            }
+
+            .yel{
+                width: 100%;
+                height: 5px;
+                background: rgb(255, 218, 95);
+            }
+
+            .top-nav{
+                height: 75px;
+                width: 100%;
+                background: rgb(76, 156, 76);
+                display: flex;
+                justify-content: right;
+            }
+
+            .top-nav p{
+                padding: 10px; 
+                margin-top: 10px;
+                font-size: 1.5em;
+                color: white;
+                font-family: 'Arial', 'sans-serif';
+                font-weight: bold;           
+            }
+
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+            }
+
+            .image{
+                width: 90%;
+                height: 50vh;
+                margin-left: 10vw;
+                margin-right: 10vw;
+            }
+
+            .image img{
+                width: 100%;
+                height: 40vh;
+                justify-content: center;
+            }
+
+            .img-des{
+                width: 80%;
+                height: 10vh;
+                justify-content: center;
+                top: 50vh;
+                background: whitesmoke;
+                position: absolute;
+            }
+
+            .img-text{
+                width: inherit;
+                text-align: right;
+                position: absolute;
+                top: 30vh;
+                right: 10vw;
+                background: rgba(189, 235, 189, 0.658);
+            }
+
+            .img-text p{
+                font-family: 'Arial', 'sans-serif';
+                font-weight: bolder;
+                color: white;
+                font-size: 3em;
+                background: rgba(49, 112, 49, 0.658);
+            }
+
+            .content{
+                
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                height: 15vh;
+                margin-left: 10vw;
+                margin-right: 10vw;
+            }
+
+            .menu{
+                width: 30%;
+                display: flex;
+                height: 10vh;
+                padding: 10px;
+                background: white;
+            }
+
+            .menu-box{
+                position: relative;
+                width: 100%;
+                justify-content: center;
+                height: 10vh;
+                background: rgb(76, 156, 76);
+            }
+
+            .menu-box i{
+                background: none;
+            }
+
+            .menu-box h3{
+                position: relative;
+                background: none;
+                margin-left: 20px;
+                justify-content: center;
+                color: white;
+                top:3vh;
+                font-family: 'Arial', 'sans-serif';
+                font-style: italic ;
+            }
+
+            .content1{
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                height: 30vh;
+                margin-top: 0;
+                margin-left: 10vw;
+                margin-right: 10vw;
+            }
+
+            .content1 h1{
+                background: none;
+                align-items: center;
+                text-align: center;
+                font-family: 'Arial', 'sans-serif';
+                font-weight: bolder;
+            }
+
+            .content-box{
+                width: 30%;
+                display: flex;
+                height: 30vh;
+                padding: 10px;
+                background: white;
+                justify-content: center;
+            }
+
+            .footer{
+                width: 100%;
+                position: fixed;
+                bottom: 0vh;
+                height: 7vh;
+                background: rgb(53, 53, 53);
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .footer p{
+                padding: 10px; 
+                margin-top: 10px;
+                font-size: 1em;
+                color: white;
+                font-family: 'Arial', 'sans-serif';
+                font-weight: bold;           
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="banner-top"></div>
+        <div class="nav-bar">
+            <div class="nav-list">
+                <p>Students</p>
+                <p>Alumni</p>
+                <p>Faculty & Staff</p>
+                <p>Parents</p>
+            </div>
+            <div class="space" style="width: 30%;"></div>
+            <div class="nav-list2">
+                <p>Blog</p>
+                <p>News</p>
+                <p>Calendar</p>
+                <p>Search</p><i class="fa fa-search"></i>
+            </div>
+            <div class="give-box">
+                <p><i class="fa fa-heart"></i>Give</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="clogo.jpg" alt="college logo">
+        </div>
+        <div class="yel"></div>
+        <div class="top-nav">
+            <p>About</p>
+            <p>Admission</p>
+            <p>Academics</p>
+            <p>Student Life</p>
+            <p>Athletics</p>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="people.jpg" alt="people">
+                <div class="img-des"></div>
+            </div>
+            <div class="img-text"><p>AGRICULTURAL TOUR VISIT DELVAL</p></div>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div class="menu-box">
+                    <h3><i class="fa fa-map"></i>&nbsp&nbspPlan a visit</h3>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-box">
+                    <h3><i class="fa fa-check"></i>&nbsp&nbspApply Now</h3>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-box">
+                    <h3><i class="fa fa-info-circle"></i>&nbsp&nbspRequest Information</h3>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Library</p>
+            <p>Employment</p>
+            <p>Offices and Services</p>
+            <p>Alumni and Giving</p>
+            <p>FOR CURRENT STUDENTS</p>
+            <p>FOR FACULTY AND STAFF</p>
+            <p>APPLY NOW</p>
+            <p>QUESTIONS?</p>
+        </div>      
+        <div class="content1">
+            <div class="content-box">
+               <h1>NEWS</h1>
+            </div>
+            <div class="content-box">
+                <h1>SPOTLIGHT</h1>
+            </div>
+            <div class="content-box">
+                <h1>EVENTS</h1>
+            </div>
+        </div>  
+    </body>
+</html>

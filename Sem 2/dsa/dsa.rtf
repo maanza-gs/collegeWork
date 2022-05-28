@@ -1,0 +1,395 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial Narrow;}{\f1\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs20\lang9 ws3\par
+//1\par
+#include<stdio.h>\par
+int main ()\par
+\{\par
+        int i, j, r, c, k = 1;\par
+        printf ("Enter the row & column limit: ");\par
+        scanf ("%d%d", &r, &c);\par
+        int a[r][c];\par
+        for(i=0; i<r; i++)\par
+        \{\par
+                for(j=0; j<c; j++)\par
+                        a[i][j]=0;\par
+        \}\par
+        i = 0;\par
+        j = r/2;\par
+        while (k<=r*c)\par
+        \{\par
+                if(a[i][j]==0)\par
+                        a[i][j] = k;\par
+                else\par
+                \{\par
+                        i++;\par
+                        j--;\par
+                        if (i>r-1)\par
+                                i=0;\par
+                        if(j<0)\par
+                                j=c-1;\par
+                        i++;\par
+                        if (i>r-1)\par
+                                i=0;\par
+                        a[i][j] = k;\par
+                \}\par
+                i--;\par
+                j++;\par
+                k++;\par
+                if (i<0)\par
+                        i=r-1;\par
+                if (j>c-1)\par
+                        j=0;\par
+        \}\par
+        for(i=0; i<r; i++)\par
+        \{\par
+                for(j=0; j<c; j++)\par
+                        printf("  %d  ", a[i][j]);\par
+                printf("\\n");\par
+        \}\par
+        return 0;\par
+\}\par
+\par
+//3\par
+\f1\fs22 #include<stdio.h>\par
+int main ()\par
+\{\par
+        int i, j, f = 0;\par
+        char a[6][6];\par
+        a[0][1] = a[1][0] = '*';\par
+        a[0][3] = a[3][0] = '*';\par
+        a[0][4] = a[4][0] = '*';\par
+        a[1][2] = a[2][1] = '*';\par
+        a[1][4] = a[4][1] = '*';\par
+        a[3][4] = a[4][3] = '*';\par
+        for (i=0; i<5; i++)\par
+        \{\par
+                for (j=0; j<5; j++)\par
+                \{\par
+                        if (a[i][j] == '*')\par
+                                f++;\par
+                \}\par
+        \}\par
+        printf ("Total friendship = %d\\n", f/2);\par
+        return 0;\par
+\}\par
+//4\par
+#include<stdio.h>\par
+int main ()\par
+\{\par
+        int i, j, f = 0;\par
+        char a[6][6];\par
+        a[0][1] = a[1][0] = '*';\par
+        a[0][3] = a[3][0] = '*';\par
+        a[0][4] = a[4][0] = '*';\par
+        a[1][2] = a[2][1] = '*';\par
+        a[1][4] = a[4][1] = '*';\par
+        a[3][4] = a[4][3] = '*';\par
+        for (i=0; i<5; i++)\par
+        \{\par
+                for (j=0; j<5; j++)\par
+                \{\par
+                        if (a[i][j] == '*')\par
+                                f++;\par
+                \}\par
+        \}\par
+        printf ("Total friendship = %d\\n", f/2);\par
+        return 0;\par
+\}\par
+20pw19@CSlinux-server:~/datastructures/ws3$ ^C\par
+20pw19@CSlinux-server:~/datastructures/ws3$ cat 4.c\par
+#include<stdio.h>\par
+int main()\par
+\{\par
+        int i, j, k;\par
+        int b[100], a[10][10];\par
+        printf ("Enter maximum no of elements: ");\par
+\par
+//6\par
+#include<stdio.h>\par
+int main ()\par
+\{\par
+        int i, j, a[10][10], r, c;\par
+        int x1, y1, x2, y2, s=0;\par
+        printf ("Enter row and column limit: ");\par
+        scanf ("%d%d", &r, &c);\par
+        printf ("Enter %d elements:\\n", r*c);\par
+        for (i=0; i<r; i++)\par
+                for (j=0; j<c; j++)\par
+                        scanf ("%d", &a[i][j]);\par
+        printf ("Enter 2 coordinates: ");\par
+        scanf ("%d%d%d%d", &x1, &y1, &x2, &y2);\par
+        for (i=x1; i<=x2; i++)\par
+        \{\par
+                for (j=y1; j<=y2; j++)\par
+                \{\par
+                        printf("%d ", a[i][j]);\par
+                        s+= a[i][j];\par
+                \}\par
+                printf("\\n");\par
+        \}\par
+        printf ("Sum = %d\\n", s);\par
+        return 0;\par
+\}\par
+\par
+ws4\par
+//1\par
+#include <iostream>\par
+#include <stdlib.h>\par
+using namespace std;\par
+class Stack\par
+\{\par
+                int a[10], n, top;\par
+        public:\par
+                Stack();\par
+                void push (int);\par
+                void pop ();\par
+                int isstackempty ();\par
+                int isstackfull ();\par
+                void displaytop ();\par
+                void displaytopelt ();\par
+\};\par
+Stack::Stack()\par
+\{\par
+        top = -1;\par
+        n = 10;\par
+\}\par
+void Stack::push (int x)\par
+\{\par
+        if (isstackfull() != 0)\par
+                cout<<"Stack is Full"<<endl;\par
+        else\par
+        \{\par
+                top = top + 1;\par
+                a[top] = x;\par
+        \}\par
+\}\par
+void Stack::pop ()\par
+\{\par
+        if (isstackempty() != 0)\par
+                cout<<"Stack is Empty"<<endl;\par
+        else\par
+        \{\par
+                int x = a[top];\par
+                top--;\par
+        \}\par
+\}\par
+int Stack ::isstackempty ()\par
+\{\par
+        if (top == -1 )\par
+                return 1;\par
+        else\par
+                return 0;\par
+\}\par
+int Stack::isstackfull ()\par
+\{\par
+        if (top > n-1)\par
+                return 1;\par
+        else\par
+                return 0;\par
+\}\par
+void Stack::displaytop ()\par
+\{\par
+        cout<<"Top index = "<<top+1<<endl;\par
+\}\par
+void Stack::displaytopelt ()\par
+\{\par
+        cout<<"Top Elemennt = "<<a[top]<<endl;\par
+\}\par
+int main ()\par
+\{\par
+        int x, c;\par
+        Stack s;\par
+        while(c!=5)\par
+        \{\par
+                cout<<"STACK OPERATION:"<<endl;\par
+                cout<<"1. PUSH\\n2.POP\\n3.DISPLAY TOP\\n4.DISPLAY TOP ELEMENT\\n5.EXIT\\n";\par
+                cout<<"\\nENTER YOUR CHOICE: ";\par
+                cin>>c;\par
+                switch (c)\par
+                \{\par
+                        case 1:\par
+                                cout<<"Enter element to be pushed into stack: ";\par
+                                cin>>x;\par
+                                s.push(x);\par
+                                break;\par
+                        case 2:\par
+                                s.pop();\par
+                                break;\par
+                        case 3:\par
+                                s.displaytop();\par
+                                break;\par
+                        case 4:\par
+                                s.displaytopelt();\par
+                                break;\par
+                        case 5:\par
+                                exit(0);\par
+                        default:\par
+                                cout<<"Enter valid choice: ";\par
+                \}\par
+        \}\par
+        return 0;\par
+\}\par
+\par
+//2\par
+#include <iostream>\par
+#include <string.h>\par
+using namespace std;\par
+class Stack\par
+\{\par
+                int top, i;\par
+                char a[14];\par
+                char b[14];\par
+        public:\par
+                Stack();\par
+                void push();\par
+                void pop();\par
+                void display();\par
+                int topval();\par
+\};\par
+Stack::Stack()\par
+\{\par
+        top = -1;\par
+        i = 0;\par
+        strcpy(a,"([]\{()[]\})[\{\}]");\par
+\}\par
+void Stack::push()\par
+\{\par
+        while(i<14)\par
+        \{\par
+                if (i==0)\par
+                        \{\par
+                                top = top+1;\par
+                                b[top] = a[i];\par
+                                display();\par
+                        \}\par
+                else if(a[i]==')' && b[top]=='(')\par
+                        pop();\par
+                else if(a[i]==']' && b[top]=='[')\par
+                        pop();\par
+                else if(a[i]=='\}' && b[top]=='\{')\par
+                        pop();\par
+                else\par
+                        \{\par
+                                top = top+1;\par
+                                b[top] = a[i];\par
+                                display();\par
+                        \}\par
+                i++;\par
+        \}\par
+\}\par
+void Stack::pop()\par
+\{\par
+        top--;\par
+        display();\par
+\}\par
+void Stack::display()\par
+\{\par
+        int i;\par
+        for(i=0;i<=top;i++)\par
+        \{\par
+                cout<<b[i]<<" ";\par
+        \}\par
+        cout<<endl;\par
+\}\par
+int Stack::topval()\par
+\{\par
+        return top;\par
+\}\par
+int main()\par
+\{\par
+        Stack s;\par
+        cout<<"Checking if the brackets are balanced: "<<endl;\par
+        s.push();\par
+        if (s.topval()==-1)\par
+                cout<<"Brackets are balanced"<<endl;\par
+        else\par
+                cout<<"Brackets are not balanced"<<endl;\par
+        return 0;\par
+\}\par
+\par
+//3\par
+#include <iostream>\par
+using namespace std;\par
+class Stack\par
+\{\par
+                int s[10],top;\par
+        public:\par
+                int min;\par
+                Stack()\par
+                \{\par
+                        top = -1;\par
+                        min = 0;\par
+                \}\par
+                void checkmin();\par
+                void push(int);\par
+                void display();\par
+                int pop();\par
+\};\par
+void Stack::checkmin()\par
+\{\par
+        if(top==0)\par
+        \{\par
+                min = s[top];\par
+        \}\par
+        else\par
+        \{\par
+                int x = pop();\par
+                int y = pop();\par
+                if (x>y)\par
+                \{\par
+                        min = y;\par
+                        push(x);\par
+                \}\par
+                else\par
+                \{\par
+                        min = x;\par
+                        push(x);\par
+                \}\par
+        \}\par
+\}\par
+void Stack::display()\par
+\{\par
+        int i;\par
+        for(i=0; i<=top; i++)\par
+                cout<<s[i]<<",";\par
+\}\par
+void Stack::push(int x)\par
+\{\par
+        if(top>9)\par
+                cout<<"Stack overflow..."<<endl;\par
+        else\par
+        \{\par
+                top+=1;\par
+                s[top] = x;\par
+        \}\par
+\}\par
+int Stack::pop()\par
+\{\par
+        if(top==-1)\par
+                cout<<"Stack is empty..."<<endl;\par
+        else\par
+        \{\par
+                int x = s[top];\par
+                top--;\par
+                return x;\par
+        \}\par
+\}\par
+int main()\par
+\{\par
+        Stack s, as;\par
+        int i, x;\par
+        for (i=0;i<4;i++)\par
+        \{\par
+                cout<<"Enter number to push into stack: ";\par
+                cin>>x;\par
+                s.push(x);\par
+                as.push(x);\par
+                as.checkmin();\par
+                s.display();\par
+                as.display();\par
+        \}\par
+        return 0;\par
+\}\par
+}
+ 

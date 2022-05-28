@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1189868556 source:z:\object computing\account\main.cpp
+	<iostream>
+
+1615617420 source:z:\object computing\account\account.cpp
+	<iostream>
+	"account.h"
+
+1615617074 z:\object computing\account\account.h
+

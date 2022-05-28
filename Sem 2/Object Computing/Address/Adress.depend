@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1615615432 source:z:\object computing\address\main.cpp
+	<iostream>
+	"Address.h"
+
+1615615299 z:\object computing\address\address.h
+
+1615615389 source:z:\object computing\address\address.cpp
+	"Address.h"
+	<iostream>
+	<string.h>
+	"Address.h"
+

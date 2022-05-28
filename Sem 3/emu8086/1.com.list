@@ -1,0 +1,66 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+1.com -- emu8086 assembler version: 4.08  
+ 
+[ 10/7/2021  --  3:48:13 PM ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       
+[   2]        :                                       ; You may customize this and other start-up templates;
+[   3]        :                                       ; The location of this template is c:\emu8086\inc\0_com_template.txt
+[   4]        :                                       include 'emu8086.inc'
+[   5]        :                                       org 100h
+[   6]        :                                       
+[   7]        :                                       ; add your code here
+[   8]        :                                       
+[   9]    0100: B8 00 20                              mov ax, 2000h
+[  10]    0103: BB 00 10                              mov bx, 1000h
+[  11]    0106: E8 30 00                              call bigger
+[  12]    0109: E8 26 00                              call swap
+[  13]    010C: 50 56 EB 0B 61 66 74 65 72 20 73 77   print 'after swap'
+                61 70 00 BE 10 01 2E 8A 04 3C 00 74 
+                07 46 B4 0E CD 10 EB F2 5E 58       
+[  14]    012E: E8 08 00                              call bigger
+[  15]        :                                       
+[  16]        :                                       
+[  17]    0131: C3                                    ret
+[  18]        :                                       
+[  19]    0132:                                       swap proc
+[  20]    0132: 8B C8                                 mov cx, ax
+[  21]    0134: 8B C3                                 mov ax, bx
+[  22]    0136: 8B D9                                 mov bx, cx
+[  23]    0138: C3                                    ret
+[  24]        :                                       
+[  25]        :                                       endp swap
+[  26]        :                                       
+[  27]    0139:                                       bigger proc
+[  28]    0139: 3B C3                                 cmp ax, bx
+[  29]    013B: 7C 30                                 jl label
+[  30]    013D: 50 56 EB 17 61 78 20 69 73 20 67 72   PRINT 'ax is greater than bx,'
+                65 61 74 65 72 20 74 68 61 6E 20 62 
+                78 2C 00 BE 41 01 2E 8A 04 3C 00 74 
+                07 46 B4 0E CD 10 EB F2 5E 58       
+[  31]    016B: EB 2C                                 jmp exit
+[  32]        :                                       
+[  33]    016D:                                       label:
+[  34]    016D: 50 56 EB 15 61 78 20 69 73 20 6C 65   print 'ax is lesser than bx'
+                73 73 65 72 20 74 68 61 6E 20 62 78 
+                00 BE 71 01 2E 8A 04 3C 00 74 07 46 
+                B4 0E CD 10 EB F2 5E 58             
+[  35]    0199:                                       exit:
+[  36]    0199: C3                                    ret
+[  37]        :                                       
+[  38]        :                                       endp bigger
+[  39]        :                                       
+[  40]        :                                       
+ 
+===================================================================================================
+ 
+
+
+
+
+===================================================================================================

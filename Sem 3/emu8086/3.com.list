@@ -1,0 +1,71 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+3.com -- emu8086 assembler version: 4.08  
+ 
+[ 10/7/2021  --  4:35:20 PM ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       
+[   2]        :                                       ; You may customize this and other start-up templates;
+[   3]        :                                       ; The location of this template is c:\emu8086\inc\0_com_template.txt
+[   4]        :                                       include 'emu8086.inc'
+[   5]        :                                       org 100h
+[   6]        :                                       
+[   7]        :                                       ; add your code here
+[   8]        :                                       
+[   9]    0100: E8 17 00                              call strnglen
+[  10]    0103: E8 22 00                              call searching
+[  11]        :                                       
+[  12]        :                                       
+[  13]    0106: C3                                    ret
+[  14]        :                                       
+[  15]    0107: 48 65 6C 6C 6F 20 57 6F 72 6C 64 24   string db 'Hello World$', 0
+                00                                  
+[  16]    0114: 6C 24 00                              char db 'l$', 0
+[  17]        :                                       
+[  18]    0117: BE 00 00                              mov si, 0
+[  19]        :                                       
+[  20]    011A:                                       strnglen proc
+[  21]        :                                       
+[  22]    011A: 8A 8C 07 01                           mov cl, string[si]
+[  23]    011E: BB 00 00                              mov bx, 0
+[  24]    0121:                                       l:
+[  25]    0121: 43                                    inc bx
+[  26]    0122: E2 FD                                 loop l
+[  27]    0124: C3                                    ret
+[  28]        :                                       
+[  29]        :                                       endp strnglen
+[  30]        :                                       
+[  31]    0125: BE 00 00                              mov si, 0
+[  32]        :                                       
+[  33]    0128:                                       searching proc
+[  34]    0128: 8A 8C 07 01                           mov cl, string[si]
+[  35]    012C: A0 14 01                              mov al, char
+[  36]    012F: BA 00 00                              mov dx, 0
+[  37]    0132:                                       l2:
+[  38]    0132: 3A C8                                 cmp cl, al
+[  39]    0134: 74 03                                 je l1
+[  40]    0136: E2 FA                                 loop l2
+[  41]    0138: C3                                    ret
+[  42]        :                                       
+[  43]    0139:                                       l1:
+[  44]    0139: 42                                    inc dx
+[  45]    013A: C3                                    ret
+[  46]        :                                       
+[  47]        :                                       endp searching
+[  48]        :                                       
+[  49]        :                                       
+[  50]        :                                       
+[  51]        :                                       
+[  52]        :                                       
+ 
+===================================================================================================
+ 
+
+
+
+
+===================================================================================================

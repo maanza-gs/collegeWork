@@ -1,0 +1,12 @@
+
+/*style.css*/
+a{
+    color: rgb(90, 9, 6);
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 100px;
+}
+
+p{
+    font-size: 200%;
+}

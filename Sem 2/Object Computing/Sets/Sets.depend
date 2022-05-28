@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1616146033 source:z:\object computing\sets\main.cpp
+	<iostream>
+	"sets.h"
+
+1616146494 z:\object computing\sets\sets.h
+
+1616145840 source:z:\object computing\sets\sets.cpp
+	<iostream>
+	"sets.h"
+

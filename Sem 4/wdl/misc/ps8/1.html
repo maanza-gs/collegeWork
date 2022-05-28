@@ -1,0 +1,13 @@
+<html>
+    <script>
+        var str = prompt("Enter email id");
+        var mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (mailFormat.test(str))
+        {
+            document.write("Mail Id is valid")
+        }    
+        else{
+            document.write("Mail Id is not valid")
+        }
+    </script>
+</html>

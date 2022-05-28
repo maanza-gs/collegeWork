@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Display Books</title>
+    <style>
+        *{
+            font-family: 'futura';
+        }
+
+        #more{
+            display: none;
+        }
+
+        #lessbtn{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h4 style="margin: 10px; font-family: 'happy monkey'; font-weight: bolder;";>BOOKS FOR YOU</h4>
+    <div class="books" style="margin-left: 20px; float: left;">
+        <div class="book" style="width: 100%; padding-top: 10px; display: flex;justify-content: space-evenly;">
+        <img src="images/book1.png" style="width: 100px;height: 150px;"> 
+            <div class="book-details" style="margin-left: 50px;display: block; width: 100%;">
+                <p>The Book Thief <br> <span style="font-size: 12px; color: #ff896b;">by Markus Zusak</span></p> <!-- book name, author name-->
+                <p style="font-size: 12px;">Description:<br>
+                    It is 1939. Nazi Germany. The country is holding its breath. Death has never been busier, and will be busier still.
+                    By her brother's graveside, <button onclick="expandDesc()" id="morebtn" style="border: none; background: none; 
+                    color: #ff896b; text-decoration: underline; cursor: pointer;">Read more</button>
+                    <span id="more">Liesel's life is changed when she picks up a single object, partially hidden in the snow. It is The Gravedigger's Handbook, left behind there by accident, and it is her first act of book thievery. So begins a love affair with books and words, as Liesel, with the help of her accordian-playing foster father, learns to read. 
+                    Soon she is stealing books from Nazi book-burnings, the mayor's wife's library, wherever there are books to be found.</span>
+                <button onclick="expandDesc()" id="lessbtn" style="border: none; background: none; cursor: pointer; color: #ff896b; 
+                    text-decoration: underline;">Read Less</button> </p>
+                <a href = "#"><select style="height: 25px; background: #ff896b; border: none; color: white; cursor: pointer;">
+                    <option>Want To Read</option>
+                    <option>Currently Reading</option>
+                    <option>Completed</option>
+                </select></a>
+            </div>
+        </div>
+        <div class="book" style="width: 100%;padding-top: 100px; display: flex; 
+        justify-content: space-evenly;">
+            <img src="images/book2.png" style="width: 100px;height: 150px;"> 
+            <div class="book-details" style="margin-left: 50px;display: block; width: 100%;">
+                <p>The Raven Boys <br> <span style="font-size: 12px; color: #ff896b;">by Maggie Stiefvater</span></p> <!-- book name, author name-->
+                <p style="font-size: 12px;">Description:<br>
+                    Katniss Everdeen, girl on fire, has survived, even though her home has been destroyed. Gale has escaped. 
+                    Katniss's family is safe. Peeta has been captured by the Capitol. District 13 really does exist. 
+                    There are rebels. There are new leaders. A revolution is unfolding.</p>
+                    <a href = "#"><select style="height: 25px; background: #ff896b; border: none; color: white; cursor: pointer;">
+                        <option>Want To Read</option>
+                        <option>Currently Reading</option>
+                        <option>Completed</option>
+                    </select></a>
+            </div>
+        </div>
+</div>
+</body>
+<script>
+    function expandDesc() {
+    var lessbtn = document.getElementById("lessbtn");
+    var morebtn = document.getElementById("morebtn");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("morebtn");
+
+    if (lessbtn.style.display === "inline") {
+        morebtn.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+        lessbtn.style.display = "none";
+    } else {
+        morebtn.style.display = "none";
+        lessbtn.style.display = "inline";
+        moreText.style.display = "inline";
+    }
+    } 
+</script>
+</html>

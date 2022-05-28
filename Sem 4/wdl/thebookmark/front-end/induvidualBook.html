@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Calibri' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="import" href="./banner.html">
+    <title>Induvidual Book Display Page</title>
+    <style>
+        *{
+            font-family: 'futura';
+        }
+    </style>
+</head>
+<body>
+    <div class="pagecontent" style="display: grid;">
+        <div id="banner" style="margin-top: 0;" ></div>
+        <div class="container" style="display:flex;">
+            <div class="box1" style="width: 25%; height: 75vh;background: #ebe6e6; justify-content: center; flex-direction: column; align-content: center;
+                margin-top: 100px; margin-left: auto; margin-right: auto;">
+                <img src="./images/book1.png" style="width: 50%; height: 50%; margin-top: 100px; margin-left: 80px; justify-content: center;">  
+                <br/><br/>
+                <a href = "#"><select style="height: 35px; width:50%; margin-left: 80px; background: #ff896b; border: none; 
+                font-size: 15px;color: white; cursor: pointer;">
+                    <option>Want To Read</option>
+                    <option>Currently Reading</option>
+                    <option>Completed</option>
+                </select></a>
+            </div>
+
+            <div class="box2" style="width: 70%; background: #ebe6e6; margin-top: 100px; margin-left: auto; margin-right: auto;">
+            
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+    $("#banner").load("banner.html"); 
+    });
+</script>
+</html>
+
+
