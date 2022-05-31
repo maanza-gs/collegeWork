@@ -1,4 +1,4 @@
-#Sensitivity Analysis
+#Sensitivity Analysis PS2
 #Q1
 library(lpSolve)
 f.obj <- c(30, 20)
@@ -7,6 +7,7 @@ f.dir <- c("<=","<=")
 f.rhs <- c(8,8)
 lp("max", f.obj, f.con, f.dir, f.rhs)
 lp("max", f.obj, f.con, f.dir, f.rhs) $solution
+z = lp("max", f.obj, f.con, f.dir, f.rhs) $solution
 
 #Question 1: If JOBCO can increase the capacity of both machines, which machine should
 #receive higher priority?
